@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Learning Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Micro-Learning Flashcards</h1>
+            <p>Retain vocabulary in under 5 minutes a day!</p>
+        </header>
+
+        <!-- Add Card Form -->
+        <section id="add-card-section" class="section active">
+            <h2>Add New Flashcard</h2>
+            <form id="card-form">
+                <input type="text" id="term" placeholder="Term (e.g., 'ubiquitous')" required>
+                <input type="text" id="definition" placeholder="Definition (e.g., 'present everywhere')" required>
+                <button type="submit">Add Card</button>
+            </form>
+            <p id="total-cards">Total Cards: 0</p>
+        </section>
+
+        <!-- Study Mode -->
+        <section id="study-section" class="section">
+            <div class="progress">
+                <span id="progress-text">0% Mastered</span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="flashcard-container">
+                <div id="flashcard" class="flashcard">
+                    <div class="front">
+                        <h2 id="term-display"></h2>
+                    </div>
+                    <div class="back">
+                        <h2 id="definition-display"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="flip-btn">Flip</button>
+                <button id="next-btn">Next Card</button>
+                <button id="mark-learned-btn">Mark Learned</button>
+                <button id="shuffle-btn">Shuffle</button>
+                <button id="reset-progress-btn">Reset Progress</button>
+            </div>
+            <p id="current-card-info">No cards available</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
